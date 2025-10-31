@@ -338,7 +338,7 @@
     let selectedFiles = [];
 
     /* ---------- CONFIG: Google Sheet ---------- */
-    const SHEET_ID = '1_ekw9zphJKkcvM-flAK8UC4RTWxPlRp9Nvx1uhgBrlI';
+    const SHEET_ID = '16D9Ajo_kaDzDkPRpseeyTjiTUCvsYz019xbAVFNm3lg';
     const GID      = '614209118'; // ← ใช้แท็บตามภาพ (แก้เฉพาะ dropdown)
     const GVIZ_URL = (query) =>
       `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?gid=${GID}&tqx=out:json&tq=${encodeURIComponent(query)}`;
@@ -378,7 +378,7 @@
         }
 
         unique.sort((a,b) => a.localeCompare(b, 'th'));
-        selectEl.innerHTML = `<option value="">— เลือกทะเบียนรถที่รอดดำเนินการ (${unique.length} รายการ) —</option>`;
+        selectEl.innerHTML = `<option value="">— เลือกทะเบียนรถที่รอดำเนินการ (${unique.length} รายการ) —</option>`;
         unique.forEach(v => {
           const opt = document.createElement('option');
           opt.value = v;
